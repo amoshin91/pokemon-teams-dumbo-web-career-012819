@@ -30,14 +30,6 @@ const allTrainersAndPokemans = () => {
     )
 }
 
-// return fetch(`httplocalhost`, {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json',
-//     'Accept': 'application/json'
-//   },
-//   body: JSON.stringify({key:value})
-// })
 
 mainTag.addEventListener('click', function(event) {
   if (event.target.dataset.pokemonId) {
@@ -66,17 +58,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   allTrainersAndPokemans();
 });
 
-// function newTrainerCard(id, name) {
-//   let newCard = document.createElement('div')
-//   newCard.classList.add('card')
-//   newCard.dataset.id = id
-//   newCard.innerHTML = `
-//     <p>${trainer.name}</p>
-//     <button data-trainer-id="${trainer.id}">Add Pokemon</button>
-//     <ul data-id="${trainer.id}"></ul>
-//   `
-//   return newCard
-// }
 
 const addPokemonToTrainer = (trainerId) => {
   return fetch(`http://localhost:3000/pokemons`, {
